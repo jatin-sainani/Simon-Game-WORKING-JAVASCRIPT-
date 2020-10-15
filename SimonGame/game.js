@@ -1,13 +1,13 @@
-var buttonColors=["red","blue","green","yellow"];
+var buttonColors=["red","green","yellow"];
 var gamePattern=[];
 var userClickedPattern=[];
 var level=0;
 var flag=true;
 function nextSequence(){
-        var randomNumber=Math.floor(Math.random()*4);
+        var randomNumber=Math.floor(Math.random()*3);
         var randomChosenColor=buttonColors[randomNumber];
         gamePattern.push(randomChosenColor);
-        $("#"+randomChosenColor).fadeIn(100).fadeOut(100).fadeIn(100);
+        $("#"+randomChosenColor).fadeIn(200).fadeOut(200).fadeIn(200);
         playSound(randomChosenColor);
         level++;
         $("h1").text("Level "+level);
